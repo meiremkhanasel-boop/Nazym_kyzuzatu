@@ -1046,7 +1046,7 @@
 </footer>
 
 <audio id="backgroundMusic" loop autoplay preload="auto">
-    <source src="target/Nazym_kyzuzatu-1.0-SNAPSHOT/music.mp3?v=1" type="audio/mpeg">
+    <source src="./music.mp3?v=1" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
 
@@ -1159,6 +1159,7 @@
 
     let musicPlaying = false;
     let fadeInterval;
+    let firstInteractionDone = false;
 
     function fadeVolume(targetVolume, callback) {
         clearInterval(fadeInterval);
@@ -1173,57 +1174,61 @@
         }, 50);
     }
 
-    function setMusicPlayingState() {
-        if (!musicPlaying) {
-            musicPlaying = true;
-            musicIcon.classList.remove('fa-volume-off', 'fa-volume-up');
+    function setMusicPlayingState(isPlaying = true) {
+        musicPlaying = isPlaying;
+        if (isPlaying) {
+            musicIcon.classList.remove('fa-volume-off');
             musicIcon.classList.add('fa-music');
             musicToggle.classList.add('playing');
-            backgroundMusic.volume = 1;
+            backgroundMusic.volume = 0.7;
+        } else {
+            musicIcon.classList.remove('fa-music');
+            musicIcon.classList.add('fa-volume-off');
+            musicToggle.classList.remove('playing');
         }
     }
 
-    const playAttempt = setInterval(() => {
-        if(backgroundMusic.paused) {
+    // Автозапуск музыки при первом взаимодействии
+    function startMusicOnFirstInteraction() {
+        if (!firstInteractionDone && backgroundMusic.paused) {
+            firstInteractionDone = true;
+            backgroundMusic.volume = 0;
             backgroundMusic.play().then(() => {
-                setMusicPlayingState();
-                clearInterval(playAttempt);
-            }).catch(() => {});
-        } else {
-            setMusicPlayingState();
-            clearInterval(playAttempt);
+                fadeVolume(0.7);
+                setMusicPlayingState(true);
+                console.log('✅ Музыка запущена автоматически');
+            }).catch(err => {
+                console.log('⚠️ Автозапуск музыки заблокирован браузером');
+            });
         }
-    }, 500);
+    }
 
-    ['click', 'touchstart', 'scroll'].forEach(event => {
-        document.addEventListener(event, function() {
-            if (!musicPlaying && backgroundMusic.paused) {
-                backgroundMusic.play().then(() => {
-                    setMusicPlayingState();
-                    clearInterval(playAttempt);
-                });
-            }
-        }, { once: true, passive: true });
+    // Слушаем любое взаимодействие пользователя
+    ['click', 'touchstart', 'scroll', 'keydown'].forEach(event => {
+        document.addEventListener(event, startMusicOnFirstInteraction, { once: true, passive: true });
     });
 
+    // Также пытаемся запустить при загрузке
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            startMusicOnFirstInteraction();
+        }, 500);
+    });
+
+    // Кнопка управления музыкой
     musicToggle.addEventListener('click', function(e) {
         e.stopPropagation();
         if (musicPlaying) {
             fadeVolume(0, () => {
                 backgroundMusic.pause();
-                musicPlaying = false;
-                musicIcon.classList.remove('fa-music');
-                musicIcon.classList.add('fa-volume-off');
-                musicToggle.classList.remove('playing');
+                setMusicPlayingState(false);
             });
         } else {
             backgroundMusic.play().then(() => {
-                fadeVolume(1);
-                musicPlaying = true;
-                musicIcon.classList.remove('fa-volume-off');
-                musicIcon.classList.add('fa-music');
-                musicToggle.classList.add('playing');
-                clearInterval(playAttempt);
+                fadeVolume(0.7);
+                setMusicPlayingState(true);
+            }).catch(err => {
+                console.error('Ошибка при воспроизведении:', err);
             });
         }
     });
