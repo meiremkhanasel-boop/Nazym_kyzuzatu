@@ -49,7 +49,7 @@
             content: '';
             position: fixed;
             inset: 0;
-            background-image: url('target/Nazym_kyzuzatu-1.0-SNAPSHOT/photo6.jpeg');
+            background-image: url('./photo6.jpeg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -776,27 +776,29 @@
         }
 
         @media (max-width: 480px) {
-            .hero h1 { font-size: 1.8rem; letter-spacing: 4px; }
-            .hero h2 { font-size: 0.9rem; letter-spacing: 3px; margin-bottom: 30px; }
-            .ornament-top { width: 95%; }
-            .ornament-top::before, .ornament-top::after { display: none; }
-            .photo-frame { max-width: 260px; }
-            .photo-frame::before { border-width: 12px; }
-            .timer { gap: 10px; }
-            .time-unit { width: 90px; height: 90px; padding: 8px; }
-            .time-unit span:first-child { font-size: 1.8rem; }
-            .time-unit span:last-child { font-size: 0.65rem; margin-top: 6px; }
-            .program-item { padding: 20px 15px; gap: 15px; }
-            .program-item i { width: auto; font-size: 1.8rem; }
-            .program-text { font-size: 0.95rem; }
-            .poem { padding: 35px 20px; }
-            .poem-text { font-size: 0.95rem; line-height: 2.2; }
-            .content-block { font-size: 0.95rem; }
-            .wish-text { font-size: 0.95rem; line-height: 1.8; }
-            .map-frame { border-width: 10px; aspect-ratio: 16 / 14; }
-            .footer-text { font-size: 1.05rem; }
-            .footer-subtext { font-size: 0.85rem; }
-            .h3-title { font-size: 1.6rem; margin-bottom: 50px; }
+            .hero h1 { font-size: 2.2rem; letter-spacing: 4px; }
+            .hero h2 { font-size: 1.1rem; letter-spacing: 3px; margin-bottom: 30px; }
+            .ornament-top { width: 95%; height: 6px; }
+            .ornament-top::before, .ornament-top::after { font-size: 1.5rem; }
+            .photo-frame { max-width: 320px; }
+            .photo-frame::before { border-width: 15px; }
+            .timer { gap: 12px; }
+            .time-unit { width: 100px; height: 100px; padding: 10px; }
+            .time-unit span:first-child { font-size: 2.2rem; }
+            .time-unit span:last-child { font-size: 0.75rem; margin-top: 8px; }
+            .program-item { padding: 25px 20px; gap: 20px; }
+            .program-item i { width: auto; font-size: 2.2rem; }
+            .program-label { font-size: 1rem; }
+            .program-text { font-size: 1rem; }
+            .poem { padding: 40px 25px; }
+            .poem-text { font-size: 1rem; line-height: 2.3; }
+            .content-block { font-size: 1rem; }
+            .wish-text { font-size: 1rem; line-height: 1.9; }
+            .wish { padding: 50px 25px; }
+            .map-frame { border-width: 12px; aspect-ratio: 16 / 14; }
+            .footer-text { font-size: 1.15rem; }
+            .footer-subtext { font-size: 0.9rem; }
+            .h3-title { font-size: 1.8rem; margin-bottom: 50px; }
             .section { padding: 60px 15px; }
             .countdown { padding: 60px 15px; }
             .map-section { padding: 60px 15px; }
@@ -817,6 +819,15 @@
             .btn-rsvp {
                 padding: 16px 15px;
                 font-size: 1.05rem;
+            }
+            .music-toggle {
+                width: 65px;
+                height: 65px;
+                bottom: 15px;
+                right: 15px;
+            }
+            #musicIcon {
+                font-size: 1.6rem;
             }
         }
 
