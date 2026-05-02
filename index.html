@@ -160,7 +160,7 @@
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 10vw, 6rem);
+            font-size: clamp(3.5rem, 18vw, 9rem);
             font-weight: 900;
             color: var(--accent-red);
             letter-spacing: 8px;
@@ -171,7 +171,7 @@
 
         .hero h2 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(1.2rem, 4vw, 2.2rem);
+            font-size: clamp(1.8rem, 6vw, 3.8rem);
             font-weight: 700;
             color: var(--accent-gold);
             letter-spacing: 10px;
@@ -278,7 +278,7 @@
         }
 
         .content-block {
-            font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+            font-size: clamp(1.3rem, 3.5vw, 1.8rem);
             color: var(--text-dark);
             font-weight: 400;
             line-height: 2;
@@ -330,7 +330,7 @@
         }
 
         .poem-text {
-            font-size: clamp(1rem, 2.3vw, 1.25rem);
+            font-size: clamp(1.3rem, 3vw, 1.6rem);
             color: var(--text-dark);
             white-space: pre-line;
             font-weight: 400;
@@ -365,10 +365,10 @@
         .wish-text {
             position: relative;
             z-index: 1;
-            font-size: clamp(1.1rem, 2.6vw, 1.35rem);
+            font-size: clamp(1.3rem, 3vw, 1.7rem);
             color: var(--white);
             font-weight: 600;
-            line-height: 2.2;
+            line-height: 2.4;
             text-align: center;
             text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25);
             letter-spacing: 0.8px;
@@ -439,7 +439,7 @@
         }
 
         .time-unit span:last-child {
-            font-size: clamp(0.75rem, 1.8vw, 0.95rem);
+            font-size: clamp(0.95rem, 2.2vw, 1.15rem);
             color: var(--accent-red);
             font-weight: 700;
             margin-top: 12px;
@@ -492,7 +492,7 @@
         .program-item:hover::before { width: 100%; }
 
         .program-item i {
-            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-size: clamp(2.4rem, 5vw, 3.2rem);
             color: var(--accent-gold);
             flex-shrink: 0;
             width: 80px;
@@ -519,7 +519,7 @@
             display: block;
             color: var(--accent-red);
             font-weight: 800;
-            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
             text-transform: uppercase;
             letter-spacing: 2.5px;
             margin-bottom: 10px;
@@ -527,7 +527,7 @@
         }
 
         .program-text {
-            font-size: clamp(0.98rem, 2.2vw, 1.2rem);
+            font-size: clamp(1.2rem, 2.8vw, 1.5rem);
             color: var(--text-dark);
             font-weight: 500;
             line-height: 1.8;
@@ -609,7 +609,7 @@
             display: block;
             color: var(--accent-red);
             font-weight: 700;
-            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
             margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -776,8 +776,8 @@
         }
 
         @media (max-width: 480px) {
-            .hero h1 { font-size: 2.2rem; letter-spacing: 4px; }
-            .hero h2 { font-size: 1.1rem; letter-spacing: 3px; margin-bottom: 30px; }
+            .hero h1 { font-size: 3.2rem; letter-spacing: 4px; }
+            .hero h2 { font-size: 1.6rem; letter-spacing: 3px; margin-bottom: 30px; }
             .ornament-top { width: 95%; height: 6px; }
             .ornament-top::before, .ornament-top::after { font-size: 1.5rem; }
             .photo-frame { max-width: 320px; }
@@ -785,15 +785,15 @@
             .timer { gap: 12px; }
             .time-unit { width: 100px; height: 100px; padding: 10px; }
             .time-unit span:first-child { font-size: 2.2rem; }
-            .time-unit span:last-child { font-size: 0.75rem; margin-top: 8px; }
+            .time-unit span:last-child { font-size: 0.9rem; margin-top: 8px; }
             .program-item { padding: 25px 20px; gap: 20px; }
-            .program-item i { width: auto; font-size: 2.2rem; }
-            .program-label { font-size: 1rem; }
-            .program-text { font-size: 1rem; }
+            .program-item i { width: auto; font-size: 2.5rem; }
+            .program-label { font-size: 1.1rem; }
+            .program-text { font-size: 1.15rem; }
             .poem { padding: 40px 25px; }
-            .poem-text { font-size: 1rem; line-height: 2.3; }
-            .content-block { font-size: 1rem; }
-            .wish-text { font-size: 1rem; line-height: 1.9; }
+            .poem-text { font-size: 1.2rem; line-height: 2.3; }
+            .content-block { font-size: 1.15rem; }
+            .wish-text { font-size: 1.15rem; line-height: 1.9; }
             .wish { padding: 50px 25px; }
             .map-frame { border-width: 12px; aspect-ratio: 16 / 14; }
             .footer-text { font-size: 1.15rem; }
@@ -929,19 +929,19 @@
     <div class="timer" id="timer" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
         <div class="time-unit">
             <span id="days">00</span>
-            <span>Күндер</span>
+            <span>Күн</span>
         </div>
         <div class="time-unit">
             <span id="hours">00</span>
-            <span>Сағаттар</span>
+            <span>Сағат</span>
         </div>
         <div class="time-unit">
             <span id="minutes">00</span>
-            <span>Минуттар</span>
+            <span>Минут</span>
         </div>
         <div class="time-unit">
             <span id="seconds">00</span>
-            <span>Секундтар</span>
+            <span>Секунд</span>
         </div>
     </div>
 </section>
@@ -1056,8 +1056,8 @@
     </div>
 </footer>
 
-<audio id="backgroundMusic" loop autoplay preload="auto">
-    <source src="./music.mp3?v=1" type="audio/mpeg">
+<audio id="backgroundMusic" loop preload="auto">
+    <source src="./music.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
 
@@ -1100,6 +1100,16 @@
     (function() {
         const frameEl = document.getElementById('photoFrame');
         const imgEl = document.getElementById('profilePhoto');
+
+        // Логирование загрузки изображения
+        imgEl.addEventListener('load', () => {
+            console.log('✅ Фото загружено:', imgEl.src);
+            addHasPhoto();
+        });
+
+        imgEl.addEventListener('error', () => {
+            console.error('❌ Ошибка загрузки фото:', imgEl.src);
+        });
 
         function addHasPhoto() {
             if (imgEl.naturalWidth > 0) {
@@ -1162,11 +1172,79 @@
         });
     }
 
-    window.addEventListener('load', function() { AOS.refresh(); });
+    window.addEventListener('load', function() {
+        AOS.refresh();
+
+        // Проверяем все ресурсы
+        console.log('🔍 Финальная проверка всех ресурсов:');
+
+        // Проверяем фоновое изображение
+        const bgImage = new Image();
+        bgImage.src = './photo6.jpeg';
+        bgImage.onload = () => console.log('✅ Фон photo6.jpeg загружен успешно');
+        bgImage.onerror = () => {
+            console.error('❌ Фон photo6.jpeg не загружен (404)');
+            console.error('  Убедитесь, что файл находится в корне проекта');
+        };
+
+        // Проверяем bg_image
+        const bgImageAlt = new Image();
+        bgImageAlt.src = './bg_image.jpeg';
+        bgImageAlt.onload = () => console.log('✅ Фото bg_image.jpeg загружена успешно');
+        bgImageAlt.onerror = () => {
+            console.warn('⚠️  Фото bg_image.jpeg не загружена (используется fallback photo6.jpeg)');
+        };
+
+        // Проверяем музыку
+        const audioTest = new Audio();
+        audioTest.src = './music.mp3';
+        audioTest.oncanplay = () => console.log('✅ Музыка music.mp3 доступна');
+        audioTest.onerror = () => {
+            const code = audioTest.error?.code;
+            console.error('❌ Музыка music.mp3 не загружена');
+            console.error('  Код ошибки:', code);
+            console.error('  Убедитесь, что файл находится в корне проекта');
+        };
+    });
 
     const musicToggle = document.getElementById('musicToggle');
     const backgroundMusic = document.getElementById('backgroundMusic');
     const musicIcon = document.getElementById('musicIcon');
+
+    // Логирование загрузки файлов
+    console.log('🎵 ДИАГНОСТИКА ПРИГЛАШЕНИЯ:');
+    console.log('  📍 Хост:', window.location.origin);
+    console.log('  📁 Путь:', window.location.pathname);
+    console.log('  🌐 Протокол:', window.location.protocol);
+    console.log('');
+    console.log('📦 Проверка файлов:');
+    console.log('  🎵 Музыка: ./music.mp3');
+    console.log('  📷 Фото: ./bg_image.jpeg');
+    console.log('  📷 Фон: ./photo6.jpeg');
+    console.log('');
+
+    // Проверяем статус аудио
+    backgroundMusic.addEventListener('loadstart', () => {
+        console.log('⏳ Начало загрузки музыки...');
+    });
+
+    backgroundMusic.addEventListener('canplay', () => {
+        console.log('✅ Музыка загружена успешно! ✨');
+    });
+
+    backgroundMusic.addEventListener('error', (e) => {
+        const errorCode = backgroundMusic.error?.code;
+        const errorMessage = {
+            1: 'MEDIA_ERR_ABORTED - загрузка была отменена',
+            2: 'MEDIA_ERR_NETWORK - сетевая ошибка',
+            3: 'MEDIA_ERR_DECODE - ошибка декодирования',
+            4: 'MEDIA_ERR_SRC_NOT_SUPPORTED - формат не поддерживается'
+        }[errorCode] || 'неизвестная ошибка';
+
+        console.error('❌ Ошибка загрузки музыки:');
+        console.error('  Код:', errorCode, '-', errorMessage);
+        console.error('  Источник:', backgroundMusic.src || backgroundMusic.currentSrc);
+    });
 
     let musicPlaying = false;
     let fadeInterval;
@@ -1243,6 +1321,123 @@
             });
         }
     });
+
+    // ===== АВТОМАТИЧЕСКАЯ ПЛАВНАЯ ПРОКРУТКА ВНИЗ (УЛУЧШЕННАЯ) =====
+    let isAutoScrolling = false;
+    let autoScrollAnimationId = null;
+    const autoScrollStartDelay = 3500; // Задержка перед началом (3.5 сек)
+    const autoScrollDuration = 28000; // Продолжительность (28 сек)
+    const autoScrollDistance = 600; // Расстояние прокрутки (600px)
+
+    function easeInOutCubic(t) {
+        // Улучшенная кубическая easing функция для плавности
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function smoothAutoScroll() {
+        // Проверка на уже работающую прокрутку
+        if (isAutoScrolling) {
+            console.log('⚠️ Автопрокрутка уже запущена');
+            return;
+        }
+
+        try {
+            isAutoScrolling = true;
+            const startTime = Date.now();
+            const startPosition = window.scrollY || 0;
+            const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+            const endPosition = Math.min(startPosition + autoScrollDistance, maxScroll);
+
+            // Логирование для отладки
+            console.log('🔄 Автопрокрутка начата:');
+            console.log('  Стартовая позиция:', startPosition);
+            console.log('  Целевая позиция:', endPosition);
+            console.log('  Максимальная позиция:', maxScroll);
+
+            function animateScroll() {
+                try {
+                    const currentTime = Date.now() - startTime;
+                    const progress = Math.min(currentTime / autoScrollDuration, 1);
+
+                    // Применяем easing функцию
+                    const easeProgress = easeInOutCubic(progress);
+
+                    // Вычисляем текущую позицию
+                    const currentPosition = startPosition + (endPosition - startPosition) * easeProgress;
+
+                    // Прокручиваем с проверкой на ошибки
+                    window.scrollTo({
+                        top: currentPosition,
+                        behavior: 'auto' // auto для плавности через requestAnimationFrame
+                    });
+
+                    // Продолжаем анимацию или завершаем
+                    if (progress < 1 && isAutoScrolling) {
+                        autoScrollAnimationId = requestAnimationFrame(animateScroll);
+                    } else {
+                        finishAutoScroll();
+                    }
+                } catch (error) {
+                    console.error('❌ Ошибка в процессе автопрокрутки:', error);
+                    finishAutoScroll();
+                }
+            }
+
+            function finishAutoScroll() {
+                isAutoScrolling = false;
+                if (autoScrollAnimationId) {
+                    cancelAnimationFrame(autoScrollAnimationId);
+                    autoScrollAnimationId = null;
+                }
+                console.log('✅ Автопрокрутка завершена');
+            }
+
+            // Запуск анимации
+            animateScroll();
+
+        } catch (error) {
+            console.error('❌ Критическая ошибка автопрокрутки:', error);
+            isAutoScrolling = false;
+        }
+    }
+
+    // Запуск при загрузке страницы
+    window.addEventListener('load', () => {
+        console.log('📄 Страница загружена, запуск автопрокрутки через', autoScrollStartDelay, 'мс');
+        setTimeout(() => {
+            smoothAutoScroll();
+        }, autoScrollStartDelay);
+    }, { once: true });
+
+    // Остановка при ручной прокрутке пользователя (с debounce)
+    let hasUserScrolled = false;
+    let userScrollTimeout;
+
+    window.addEventListener('wheel', (e) => {
+        // Обнаруживаем скролл мышью
+        if (isAutoScrolling && e.deltaY !== 0) {
+            console.log('🖱️ Пользователь скроллит, остановка автопрокрутки');
+            isAutoScrolling = false;
+            if (autoScrollAnimationId) {
+                cancelAnimationFrame(autoScrollAnimationId);
+                autoScrollAnimationId = null;
+            }
+            hasUserScrolled = true;
+        }
+    }, { passive: true });
+
+    window.addEventListener('touchmove', () => {
+        // Обнаруживаем скролл на сенсорном устройстве
+        if (isAutoScrolling) {
+            console.log('👆 Сенсорный скролл, остановка автопрокрутки');
+            isAutoScrolling = false;
+            if (autoScrollAnimationId) {
+                cancelAnimationFrame(autoScrollAnimationId);
+                autoScrollAnimationId = null;
+            }
+            hasUserScrolled = true;
+        }
+    }, { passive: true });
 </script>
 </body>
 </html>
